@@ -1,0 +1,16 @@
+<h1><%= @task.title %></h1>
+<% if @task.title == "Studying" %>
+  <p>A lot of flashcards to do</p>
+<% elsif @task.title == "Laundry" %>
+  <p>Do not mix colors!</p>
+<% end %>
+
+<% if @task.completed %>
+  <p>This task is completed</p>
+<% else %>
+  <p>This task is not completed yet</p>
+<% end %>
+
+<p>
+  <%= link_to "Back to list", tasks_path %>
+</p>
